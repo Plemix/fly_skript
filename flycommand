@@ -1,0 +1,15 @@
+Command /fly:
+	Description: Toggle flight
+	Usage: /fly
+	Executable by: players
+	Permission: plemix.fly
+	Trigger:
+		If {fly.%player%} is not set:
+			Send "§c§lSYSTEM §8▎ &aYou have enabled flight" to player
+			set player's flight mode to true
+			Set {fly.%player%} to true
+			Stop
+		Send "§c§lSYSTEM §8▎ &cYou have disabled flight" to player
+		set player's flight mode to false
+		Delete {fly.%player%}
+		Stop
